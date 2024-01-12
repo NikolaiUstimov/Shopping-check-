@@ -7,9 +7,47 @@ body {
 	background-color: rgb(226, 226, 226);
 	font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
+
+/* Стилизация таблицы */
+table {
+	table-layout: fixed;
+	padding: 0;
+	margin: 0;
+	display: block;
+	width: 710px;
+	border-collapse: collapse;
+	border: 1px solid rgb(167, 167, 167);
+	border-radius: 8px;
+}
+td:nth-child(1) {
+	text-align: center;
+	padding: 0;
+	width: 30px;
+}
+td:nth-child(6) {
+	text-align: center;
+	padding: 0;
+	width: 90px;
+}
+td:nth-child(7) {
+	text-align: center;
+	padding: 0;
+	width: 90px;
+}
+th {
+	text-align: center;
+	padding: 0;
+	width: 90px;
+}
+/* Конец стилизации таблицы */
+
 .title {
 	margin: 0;
 	padding: 0;
+	margin-bottom: 20px;
+}
+.input_wrap {
+	width: 710px;
 	margin-bottom: 20px;
 }
 .input_add {
