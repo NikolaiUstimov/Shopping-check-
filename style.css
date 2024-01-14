@@ -4,49 +4,19 @@
 body {
 	margin: 0;
 	padding: 20px;
-	background-color: rgb(226, 226, 226);
+	background-color: rgb(240, 239, 239);
 	font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
-
-/* Стилизация таблицы */
-table {
-	table-layout: fixed;
-	padding: 0;
-	margin: 0;
-	display: block;
-	width: 710px;
-	border-collapse: collapse;
-	border: 1px solid rgb(167, 167, 167);
-	border-radius: 8px;
-}
-td:nth-child(1) {
-	text-align: center;
-	padding: 0;
-	width: 30px;
-}
-td:nth-child(6) {
-	text-align: center;
-	padding: 0;
-	width: 90px;
-}
-td:nth-child(7) {
-	text-align: center;
-	padding: 0;
-	width: 90px;
-}
-th {
-	text-align: center;
-	padding: 0;
-	width: 90px;
-}
-/* Конец стилизации таблицы */
 
 .title {
 	margin: 0;
 	padding: 0;
 	margin-bottom: 20px;
+	color: rgb(51, 49, 49);
 }
 .input_wrap {
+	display: flex;
+	justify-content: space-between;
 	width: 710px;
 	margin-bottom: 20px;
 }
@@ -59,13 +29,156 @@ th {
 	border-radius: 7px;
 	margin-right: 10px;
 }
+.product_inp-wrap {
+	display: flex;
+	flex-direction: column;
+}
+.error {
+	color: red;
+	font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+	font-size: .8rem;
+	font-weight: 300;
+}
 .add_btn-product {
 	min-width: 100px;
 	height: 40px;
 	border: 1px solid rgb(173, 173, 173);
 	border-radius: 7px;
 	background-color: rgb(19, 207, 19);
-	color: aliceblue;
+	color: rgb(231, 231, 231);
 	font-size: 14px;
 	font-weight: 700;
+	cursor: pointer;
+	transition: background-color .3s;
+}
+.add_btn-product:hover {
+	background-color: rgb(70, 211, 70);
+}
+.add_btn-product:active {
+	background-color: rgb(87, 21, 163);
+}
+.list_table-wrap {
+	width: 710px;
+	display: flex;
+	flex-direction: column;
+	gap: 15px;
+	margin-bottom: 20px;
+}
+/* Стиль для пустого списка */
+.list_table-empty {
+	display: flex;
+	width: 710px;
+	height: 40px;
+	align-items: center;
+	justify-content: center;
+	color: rgb(51, 49, 49);
+	font-size: 1.2rem;
+	margin-bottom: 20px;
+}
+/* Стилизация таблицы */
+table {
+	table-layout: fixed;
+	padding: 0;
+	margin: 0;
+	display: block;
+	width: 710px;
+	min-height: 40px;
+	border-collapse: collapse;
+	background-color: rgb(245, 245, 245);;
+	border: 1px solid rgb(167, 167, 167);
+	border-radius: 8px;
+	font-weight: 300;
+}
+td:nth-child(1) {
+	text-align: center;
+	padding: 0;
+	width: 30px;
+	color: rgb(51, 49, 49);
+}
+td:nth-child(6) {
+	text-align: center;
+	padding: 4px 0 0 0;
+	width: 80px;
+}
+td:nth-child(7) {
+	text-align: center;
+	padding: 4px 0 0 0;
+	width: 80px;
+}
+.name_th {
+	text-align: left;
+	padding: 0;
+	width: 210px;
+	font-size: .8rem;
+	color: rgb(107, 106, 106);
+	font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+	font-weight: 600;
+}
+.count_price-th {
+	text-align: left;
+	padding: 0;
+	width: 102px;
+	font-size: .8rem;
+	color: rgb(107, 106, 106);
+	font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+	font-weight: 600;
+}
+.value_th {
+	text-align: left;
+	padding: 0;
+	font-size: 1rem;
+	color: rgb(51, 49, 49);
+	font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+	font-weight: 700;
+}
+/* Конец стилизации таблицы */
+
+.rename_btn {
+	height: 25px;
+	border: none;
+	border-radius: 7px;
+	background-color: rgb(19, 207, 19);
+	color: rgb(231, 231, 231);
+	font-size: 14px;
+	font-weight: 600;
+	cursor: pointer;
+}
+.rename_btn:hover {
+	background-color: rgb(70, 211, 70);
+}
+.rename_btn:active {
+	background-color: rgb(87, 21, 163);
+}
+.remove_btn {
+	height: 25px;
+	border: none;
+	border-radius: 7px;
+	background-color: rgb(233, 12, 5);
+	color: rgb(231, 231, 231);
+	font-size: 14px;
+	font-weight: 600;
+	cursor: pointer;
+}
+.remove_btn:hover {
+	background-color: rgb(214, 53, 47);
+}
+.remove_btn:active {
+	background-color: rgb(87, 21, 163);
+}
+.total_sum-wrap {
+	width: 710px;
+	/* height: 35px; */
+	padding: 5px;
+	display: flex;
+	justify-content: space-between;
+	border-radius: 7px;
+	background-color: rgb(37, 36, 36);
+}
+.total_sum-text {
+	color: rgb(197, 197, 197);
+	font-size: 1.3rem;
+}
+.total_sum-value {
+	color: rgb(197, 197, 197);
+	font-size: 1.3rem;
 }
